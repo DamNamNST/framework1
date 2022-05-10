@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  message: string = 'Đei là Message thay cho hello'
   constructor() { }
 
   ngOnInit(): void {
