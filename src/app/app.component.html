@@ -1,2 +1,52 @@
 <app-header></app-header>
+<hr />
+<p>Name: {{ productName }}</p>
+<p>Price: {{ productPrice }}</p>
+<p>Status: {{ productStatus }}</p>
+<p>Info: {{ productInfo.name }} - {{ productInfo.price }}</p>
+<button class="btn btn-success" (click)="onHandleClick()">
+  Show your self
+</button>
+<hr />
+<form action="">
+  <input
+    type="text"
+    class="form-comtrol"
+    (keypress)="onHandleKeyPress($event)"
+    value="{{ title }}"
+  />
+  {{ title }}
+</form>
+<hr />
+<h2>ngModel</h2>
+<input type="text" [(ngModel)]="title" value="{{ title }}" /> {{ title }}
+<div *ngIf="productStatus">
+  <hr />
+  <table class="table table-warning">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Status</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of productList; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.status ? "Còn hàng" : "Hết hàng" }}</td>
+        <td>
+          <button class="btn btn-danger" (click)="onHandleRemove(product.id)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<hr />
 <router-outlet></router-outlet>
