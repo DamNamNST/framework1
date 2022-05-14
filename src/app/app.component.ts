@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IProduct } from './models/Product';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ export class AppComponent {
     name: 'Product Info',
     price: 200,
   };
-  productList: { id: number; price: number; name: string; status: boolean }[] =
+  productList: IProduct[] =
     [
       {
         id: 1,
@@ -42,17 +43,17 @@ export class AppComponent {
         status: true,
       },
     ];
-  onHandleClick() {
-    console.log('Clicked!');
-    this.productStatus = !this.productStatus;
-  }
-  onHandleRemove(id: number) {
-    console.log('Deleted!');
-    console.log(id);
-    this.productList = this.productList.filter((product) => product.id !== id);
-  }
-  onHandleKeyPress(event: any) {
-    console.log(event.target.value);
-    this.title = event.target.value;
-  }
+  // onHandleClick() {
+  //   console.log('Clicked!');
+  //   this.productStatus = !this.productStatus;
+  // }
+  // onHandleRemove(id: number) {
+  //   console.log('Deleted!');
+  //   console.log(id);
+  //   this.productList = this.productList.filter((product) => product.id !== id);
+  // }
+  // onHandleKeyPress(event: any) {
+  //   console.log(event.target.value);
+  //   this.title = event.target.value;
+  // }
 }
