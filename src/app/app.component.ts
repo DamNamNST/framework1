@@ -7,15 +7,15 @@ import { IProduct } from './models/Product';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'my-app';
-  productName: string = 'Product A';
-  productPrice: number = 10;
-  productStatus: boolean = false;
-  productInfo: { id: number; price: number; name: string } = {
-    id: 1,
-    name: 'Product Info',
-    price: 200,
-  };
+  // title = 'my-app';
+  // productName: string = 'Product A';
+  // productPrice: number = 10;
+  // productStatus: boolean = false;
+  // productInfo: { id: number; price: number; name: string } = {
+  //   id: 1,
+  //   name: 'Product Info',
+  //   price: 200,
+  // };
   productList: IProduct[] =
     [
       {
@@ -43,6 +43,10 @@ export class AppComponent {
         status: true,
       },
     ];
+    onHandleAdd(product: IProduct){
+      console.log(product);
+      this.productList.push(product)
+    }
   // onHandleClick() {
   //   console.log('Clicked!');
   //   this.productStatus = !this.productStatus;
