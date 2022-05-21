@@ -1,10 +1,11 @@
 <app-header></app-header>
 
 <h2>Product List Component</h2>
-<app-products [products]="productList"></app-products>
+<app-products></app-products>
 <hr />
 <h2>Product Add Component</h2>
 <app-product-add (onAdd)="onHandleAdd($event)"></app-product-add>
+<router-outlet></router-outlet>
 <!-- <p>Name: {{ productName }}</p>
 <p>Price: {{ productPrice }}</p>
 <p>Status: {{ productStatus }}</p>

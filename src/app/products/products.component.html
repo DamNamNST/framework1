@@ -10,25 +10,25 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let product of products; let i = index">
+    <tr *ngFor="let product of productList; let i = index">
       <td>{{ i + 1 }}</td>
       <td>{{ product.name }}</td>
       <td>{{ product.price }}</td>
       <td>{{ product.status ? "Còn hàng" : "Hết hàng" }}</td>
       <td>
-        <button class="btn btn-danger" (click)="onHandleRemove(product.id)">
-          Delete
-        </button>
-        <button class="btn btn-success ms-1" (click)="onHandleGetInfo(product)">
+        <!-- <button class="btn btn-danger" (click)="onHandleRemove(product.id)"> -->
+          <!-- Delete
+        </button> -->
+        <button class="btn btn-success ms-1" >
           Info
         </button>
       </td>
     </tr>
   </tbody>
 </table>
-<div class="detail" *ngIf="productDetail">
+<!-- <div class="detail" *ngIf="productDetail">
   <hr />
   <app-product-detail [product]="productDetail"></app-product-detail>
   <router-outlet></router-outlet>
   {{productDetail.name}}
-</div>
+</div> -->
