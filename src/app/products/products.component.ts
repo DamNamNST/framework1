@@ -11,10 +11,23 @@ export class ProductsComponent implements OnInit {
   // productDetail!:IProduct;
   productList!: IProduct[];
   constructor(private productService: ProductService) {
-    this.productList = this.productService.getProducts();
+    // this.productList = this.productService.getProducts();
+    this.showProducts();
   }
 
   ngOnInit(): void {}
+  showProducts(){
+    this.productService.getProducts().subscribe(data => {
+      this.productList = data;
+    })
+  }
+  onRemoveItem(id: number){
+    //call api 
+    this.productService.removeProduct(id).subscribe(()=>{
+      //reRender
+      this.productList = this.productList.filter(item => item.id !== id)
+    })
+  }
   // onHandleRemove(id: number) {
   //   // console.log('Deleted!');
   //   // console.log(id);

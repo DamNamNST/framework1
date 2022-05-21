@@ -16,10 +16,10 @@
       <td>{{ product.price }}</td>
       <td>{{ product.status ? "Còn hàng" : "Hết hàng" }}</td>
       <td>
-        <!-- <button class="btn btn-danger" (click)="onHandleRemove(product.id)"> -->
-          <!-- Delete
-        </button> -->
-        <button class="btn btn-success ms-1" >
+        <button class="btn btn-danger" (click)="onRemoveItem(product.id)">
+          Delete
+        </button>
+        <button class="btn btn-success ms-1" routerLink="/product/{{product.id}}">
           Info
         </button>
       </td>
