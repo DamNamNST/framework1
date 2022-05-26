@@ -17,6 +17,8 @@ import { LoginComponent } from './login/login.component';
 import { ClientComponent } from './layouts/client/client.component';
 import { AdminComponent } from './layouts/admin/admin.component';
 import { AdminContentComponent } from './layouts/admin-content/admin-content.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { AdminContentComponent } from './layouts/admin-content/admin-content.com
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
