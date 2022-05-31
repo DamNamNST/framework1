@@ -18,5 +18,28 @@
       "price": 200,
       "status": false
     }
+  ],
+  "users" : [
+    {
+      "id": 1,
+      "name": "namdt",
+      "age": 20,
+      "password": "123456",
+      "avatar": "https://picsum.photos/300"
+    },
+    {
+      "id": 2,
+      "name": "admin",
+      "age": 21,
+      "password": "123456",
+      "avatar": "https://picsum.photos/300"
+    },
+    {
+      "id": 3,
+      "name": "guest",
+      "age": 22,
+      "password": "123456",
+      "avatar": "https://picsum.photos/300"
+    }
   ]
 }

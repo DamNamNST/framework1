@@ -19,6 +19,8 @@ import { AdminComponent } from './layouts/admin/admin.component';
 import { AdminContentComponent } from './layouts/admin-content/admin-content.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { SigninComponent } from './signin/signin.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { RouterModule } from '@angular/router';
     LoginComponent,
     ClientComponent,
     AdminComponent,
-    AdminContentComponent
+    AdminContentComponent,
+    SigninComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
