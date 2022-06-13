@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PostFormComponent } from './components/post-form/post-form.component';
 import { PostListComponent } from './components/post-list/post-list.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { ProductFormComponent } from './components/product-form/product-form.component';
+import { ProductsComponent } from './components/products/products.component';
 import { ProjectFormComponent } from './components/project-form/project-form.component';
 import { ProjectListComponent } from './components/project-list/project-list.component';
 import { SigninComponent } from './components/signin/signin.component';
@@ -30,16 +33,15 @@ const routes: Routes = [
   {
     path: "admin", canActivate: [AdminGuard], component: AdminComponent,
     children: [
-      // {
-      //   path: "products", children: [
-      //     { path: "", redirectTo: 'list', pathMatch: 'full' },
-      //     { path: '?_name=:search', component: ProductEditComponent },
-      //     { path: 'list', component: ProductComponent },
-      //     { path: "add", component: ProductFormComponent },
-      //     { path: ":id", component: ProductDetailComponent },
-      //     { path: "edit/:id", component: ProductFormComponent },
-      //   ]
-      // },
+      {
+        path: "products", children: [
+          { path: "", redirectTo: 'list', pathMatch: 'full' },
+          { path: 'list', component: ProductsComponent },
+          { path: "add", component: ProductFormComponent },
+          { path: ":id", component: ProductDetailComponent },
+          { path: "edit/:id", component: ProductFormComponent },
+        ]
+      },
       {
         path: "posts", children: [
           { path: "", redirectTo: 'list', pathMatch: 'full' },

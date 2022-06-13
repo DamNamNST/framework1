@@ -18,7 +18,7 @@ export class PostFormComponent implements OnInit {
   isImgLoad: boolean = false;
   product: PostType = {
     title: '',
-    image: '',
+    image: 'https://picsum.photos/200/300',
     createAt: '',
     categoriesPostId: 0,
     short_desc: '',
@@ -67,35 +67,4 @@ export class PostFormComponent implements OnInit {
 
   }
 
-  async changeListener(files: any) {
-    let fileList2 = files.target.files[0];
-    console.log(fileList2);
-    if (fileList2) {
-      let file: File = fileList2;
-      console.log(file.name);
-      console.log(file.size);
-      console.log(file.type);
-
-      if (file) {
-        const CLOUDINARY_PRESET = "iqnyfok8";
-        const CLOUDINARY_API_URL =
-          "https://api.cloudinary.com/v1_1/vintph16172/image/upload"
-
-        const formData = new FormData();
-        formData.append("file", file);
-        formData.append("upload_preset", CLOUDINARY_PRESET);
-
-        const { data } = await axios.post(CLOUDINARY_API_URL, formData, {
-          headers: {
-            "Content-Type": "application/form-data"
-          }
-        });
-        console.log(data);
-        
-        this.product.image = data.url;
-        this.isImgLoad = true
-        console.log(this.product);
-      }
-    };
-  }
 }
