@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import mockData from 'src/data';
-import { IProduct } from '../models/Product';
-import { ProductService } from '../services/product.service';
+import { IProduct } from '../../models/Product';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-product-detail',

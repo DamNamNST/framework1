@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { IUser } from '../models/User';
-import { LoginService } from '../services/login.service';
-import { ProductService } from '../services/product.service';
+import { IUser } from '../../models/User';
+import { LoginService } from '../../services/login.service';
+import { ProductService } from '../../services/product.service';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',

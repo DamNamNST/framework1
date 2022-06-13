@@ -1,29 +1,52 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { AboutComponent } from './components/about/about.component';
-import { HomeComponent } from './home/home.component';
+import { Routes, RouterModule } from '@angular/router';
 import { ClientComponent } from './layouts/client/client.component';
-import { ProductAddComponent } from './product-add/product-add.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
-import { ProductsComponent } from './products/products.component';
-import { AdminGuard } from './services/guards/admin.guard';
-import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
   {
-    path: 'product', canActivate: [AdminGuard],
+    path: '',
+    component: ClientComponent,
     children: [
-      { path: '', redirectTo: 'list',pathMatch: 'full' },
-      { path: 'list', component: ProductsComponent },
-      { path: 'add', component: ProductAddComponent },
-      { path: ':id', component: ProductDetailComponent },
-      { path: 'edit/:id', component: ProductAddComponent }
-      
+      { path: '', component: HomeComponent },
+      { path: 'about', component: AboutComponent },
+      { path: 'blog', component: BlogComponent },
+      { path: 'work', component: WorkComponent },
     ],
   },
   { path: 'signup', component: SignupComponent },
+  { path: 'signin', component: SigninComponent },
+  {
+    path: "admin", canActivate: [AdminGuard], component: AdminComponent,
+    children: [
+      {
+        path: "products", children: [
+          { path: "", redirectTo: 'list', pathMatch: 'full' },
+          { path: '?_name=:search', component: ProductEditComponent },
+          { path: 'list', component: ProductComponent },
+          { path: "add", component: ProductFormComponent },
+          { path: ":id", component: ProductDetailComponent },
+          { path: "edit/:id", component: ProductFormComponent },
+        ]
+      },
+      {
+        path: "posts", children: [
+          { path: "", redirectTo: 'list', pathMatch: 'full' },
+          { path: 'list', component: PostListComponent },
+          { path: "add", component: PostFormComponent },
+          { path: "edit/:id", component: PostFormComponent },
+        ]
+      },
+      {
+        path: "projects", children: [
+          { path: "", redirectTo: 'list', pathMatch: 'full' },
+          { path: 'list', component: ProjectListComponent },
+          { path: "add", component: ProjectFormComponent },
+          { path: "edit/:id", component: ProjectFormComponent },
+        ]
+      },
+
+    ]
+  },
 ];
 
 @NgModule({

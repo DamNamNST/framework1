@@ -2,44 +2,226 @@
   "products": [
     {
       "id": 1,
-      "name": "Product AA",
-      "price": 200,
-      "status": false
+      "name": "product 1",
+      "price": 100,
+      "status": 1,
+      "description": "abc 1"
     },
     {
       "id": 2,
-      "name": "Product BB",
+      "name": "product 2",
       "price": 200,
-      "status": true
+      "status": 2,
+      "description": "abc 2 s"
     },
     {
       "id": 3,
-      "name": "Product CC",
-      "price": 200,
-      "status": false
+      "name": "product 3",
+      "price": 300,
+      "status": 3,
+      "description": "abc 3"
+    },
+    {
+      "name": "Burger Xông Khói",
+      "price": 200000,
+      "status": true,
+      "description": "bac 456",
+      "id": 5
     }
   ],
-  "users" : [
+  "users": [
+    {
+      "email": "admin12345@gmail.com",
+      "password": "$2a$10$qCtfurr85ncyne8RQYHvk.InOybH0uofRBOrNwvYC311uwNTD3l76",
+      "remember": true,
+      "role": 2,
+      "id": 1
+    },
+    {
+      "email": "abc123@gmail.com",
+      "password": "$2a$10$64bPsa6P.3B7O12xhHnjBuUFZZ9/miPC52Mg1MI4nhoh9X5JAr6Si",
+      "remember": true,
+      "role": 2,
+      "id": 2
+    },
+    {
+      "email": "admin666@gmail.com",
+      "password": "$2a$10$9zCju5zcIIEnrlF4pCyuR.FX3oRY75xR.bqCr8ZepWBQYcbInygwe",
+      "remember": true,
+      "role": 2,
+      "id": 3
+    },
+    {
+      "email": "nguoidung1@gmail.com",
+      "password": "$2a$10$z6ZAv1u2gpJWAtcJaaEhZ.Iml.zv/4TQj.E1UDIRlsStCE2sUzNdW",
+      "username": "nguoidung1",
+      "role": 1,
+      "id": 4
+    }
+  ],
+  "user": {
+    "name": "Nguyễn Trường Vĩ",
+    "position": "FrontEnd-Developer",
+    "about": "abc",
+    "cv": "abc"
+  },
+  "posts": [
     {
       "id": 1,
-      "name": "namdt",
-      "age": 20,
-      "password": "123456",
-      "avatar": "https://picsum.photos/300"
+      "title": "UI Interactions of the week 1",
+      "image": "http://res.cloudinary.com/vintph16172/image/upload/v1655038649/jtbpznzjprnojbudueu7.jpg",
+      "createAt": "2022-06-12T12:57:38.809Z",
+      "categoriesPostId": 1,
+      "short_desc": "abc 123",
+      "desc": "<p>jfnejkwebfjewbf</p>\n"
     },
     {
       "id": 2,
-      "name": "admin",
-      "age": 21,
-      "password": "123456",
-      "avatar": "https://picsum.photos/300"
+      "title": "Post 2",
+      "image": "abc.img",
+      "createAt": "2022-06-10T14:42:15.017Z",
+      "categoriesPostId": 2,
+      "short_desc": "abc 12345 6",
+      "desc": "<p>jfnejkwebfjewbf</p>\n"
     },
     {
       "id": 3,
-      "name": "guest",
-      "age": 22,
-      "password": "123456",
-      "avatar": "https://picsum.photos/300"
+      "title": "UI Interactions of the week 3",
+      "image": "https://picsum.photos/200/300",
+      "createAt": "2022-06-10T14:08:50.598Z",
+      "categoriesPostId": 1,
+      "short_desc": "abc 123",
+      "desc": "jfnejkwebfjewbf"
+    },
+    {
+      "id": 4,
+      "title": "UI Interactions of the week 4",
+      "image": "https://picsum.photos/200/300",
+      "createAt": "2022-06-10T14:08:50.598Z",
+      "categoriesPostId": 1,
+      "short_desc": "abc 123",
+      "desc": "jfnejkwebfjewbf"
+    },
+    {
+      "id": 5,
+      "title": "UI Interactions of the week 5",
+      "image": "https://picsum.photos/200/300",
+      "createAt": "2022-06-10T14:08:50.598Z",
+      "categoriesPostId": 1,
+      "short_desc": "abc 123",
+      "desc": "jfnejkwebfjewbf"
+    },
+    {
+      "id": 6,
+      "title": "UI Interactions of the week 6",
+      "image": "https://picsum.photos/200/300",
+      "createAt": "2022-06-10T14:08:50.598Z",
+      "categoriesPostId": 1,
+      "short_desc": "abc 123",
+      "desc": "jfnejkwebfjewbf"
+    },
+    {
+      "id": 7,
+      "title": "UI Interactions of the week 7",
+      "image": "https://picsum.photos/200/300",
+      "createAt": "2022-06-10T14:08:50.598Z",
+      "categoriesPostId": 1,
+      "short_desc": "abc 123",
+      "desc": "jfnejkwebfjewbf"
+    },
+    {
+      "id": 8,
+      "title": "UI Interactions of the week 8",
+      "image": "https://picsum.photos/200/300",
+      "createAt": "2022-06-10T14:08:50.598Z",
+      "categoriesPostId": 1,
+      "short_desc": "abc 123",
+      "desc": "jfnejkwebfjewbf"
+    },
+    {
+      "id": 9,
+      "title": "UI Interactions of the week 9",
+      "image": "https://picsum.photos/200/300",
+      "createAt": "2022-06-10T14:08:50.598Z",
+      "categoriesPostId": 1,
+      "short_desc": "abc 123",
+      "desc": "jfnejkwebfjewbf"
+    },
+    {
+      "id": 10,
+      "title": "UI Interactions of the week 10",
+      "image": "https://picsum.photos/200/300",
+      "createAt": "2022-06-10T14:08:50.598Z",
+      "categoriesPostId": 1,
+      "short_desc": "abc 123",
+      "desc": "jfnejkwebfjewbf"
+    },
+    {
+      "id": 11,
+      "title": "UI Interactions of the week 11",
+      "image": "https://picsum.photos/200/300",
+      "createAt": "2022-06-10T14:08:50.598Z",
+      "categoriesPostId": 1,
+      "short_desc": "abc 123",
+      "desc": "jfnejkwebfjewbf"
+    },
+    {
+      "title": "test 123445",
+      "image": "http://res.cloudinary.com/vintph16172/image/upload/v1655044398/rwqcy94tqsi2icarmpgj.jpg",
+      "createAt": "2022-06-12T14:33:32.958Z",
+      "categoriesPostId": "1",
+      "short_desc": "abc44444",
+      "desc": "<p>aaaaaaaaaaaaaaaaaa</p>\n",
+      "id": 12
+    }
+  ],
+  "categoriesPosts": [
+    {
+      "id": 1,
+      "name": "Công Nghệ"
+    },
+    {
+      "id": 2,
+      "name": "Tin Tức"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Website Bán đồ ăn nhanh Fastfood",
+      "image": "abc.img",
+      "createAt": "12/02/2022",
+      "categoriesProjectId": 1,
+      "short_desc": "abc 123",
+      "desc": "jfnejkwebfjewbf"
+    },
+    {
+      "id": 2,
+      "name": "Website Bán đồ ăn nhanh Fastfood",
+      "image": "abc.img",
+      "createAt": "12/02/2022",
+      "categoriesProjectId": 2,
+      "short_desc": "abc 123",
+      "desc": "jfnejkwebfjewbf"
+    },
+    {
+      "name": "Burger Xông Khói",
+      "image": "http://res.cloudinary.com/vintph16172/image/upload/v1655047124/h1n7gfjmnuqg8txogqjj.jpg",
+      "createAt": "2022-06-12T15:18:51.356Z",
+      "categoriesProjectId": "1",
+      "short_desc": "132564",
+      "desc": "<p>&aacute;df3e1f5ew1f</p>\n",
+      "id": 3
+    }
+  ],
+  "categoriesProjects": [
+    {
+      "id": 1,
+      "name": "Công Nghệ"
+    },
+    {
+      "id": 2,
+      "name": "Tin Tức"
     }
   ]
 }
