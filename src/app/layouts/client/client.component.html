@@ -1,19 +1,65 @@
-<p>client works!</p>
-<h1>CLIENT PAGE</h1>
-<header> Client Header
+<header class="container  ">
+  <nav class="
+         flex flex-wrap
+         items-center
+         justify-between
+         w-full
+         py-2
+         md:py-0
+         px-12
+         
+         text-lg text-gray-700
+         bg-white
+        
+          
+       ">
+    <div>
+      <a href="#">
+        <img src="https://picsum.photos/200/300" alt="" class="w-[50px] h-[50px]">
+      </a>
+    </div>
 
-  <nav>
-    <ul>
-      <li>
-        <a href="" routerLink="/">Home</a>
-      </li>
-      <li>
-        <a href="" routerLink="/phones">Phones</a>
-      </li>
-    </ul>
+    <svg (click)="menuToggle()" xmlns="http://www.w3.org/2000/svg" id="menu-button" class="h-6 w-6 cursor-pointer md:hidden block" fill="none"
+      viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+
+
+    <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
+      <ul class="
+             pt-4
+             text-base text-gray-700
+             md:flex
+             md:justify-between 
+             md:pt-0">
+        <li>
+          
+          <a class="text-2xl text-black md:p-4 py-2 block hover:text-purple-400" routerLink="/work">Works</a>
+        </li>
+        <li>
+          <a class="text-2xl text-black md:p-4 py-2 block hover:text-purple-400" routerLink="/blog">Blog</a>
+        </li>
+        <li>
+          <a class="text-2xl text-black md:p-4 py-2 block hover:text-purple-400" routerLink="/contact">Contact</a>
+        </li>
+
+      </ul>
+    </div>
   </nav>
 </header>
-<main>
-  <router-outlet></router-outlet>
-</main>
-<footer>Client Footer</footer>
+
+<router-outlet></router-outlet>
+
+<footer>
+  <div class="mt-24 pb-12">
+    <div class="flex  justify-center">
+      <i class="text-4xl p-3" nz-icon nzType="facebook" nzTheme="fill"></i>
+      <i class="text-4xl p-3" nz-icon nzType="instagram" nzTheme="outline"></i>
+      <i class="text-4xl p-3" nz-icon nzType="twitter" nzTheme="outline"></i>
+      <i class="text-4xl p-3" nz-icon nzType="linkedin" nzTheme="fill"></i>
+    </div>
+    <div class="flex  justify-center">
+      <span class=" text-md">Copyright ©2020 All rights reserved </span>
+    </div>
+  </div>
+</footer>

@@ -1,1 +1,56 @@
-<p>admin works!</p>
+<nz-layout class=" h-full">
+  <nz-sider class="menu-sidebar"
+            nzCollapsible
+            nzWidth="256px"
+            nzBreakpoint="md"
+            [(nzCollapsed)]="isCollapsed"
+            [nzTrigger]="null">
+    <div class="sidebar-logo">
+      <a routerLink="/" target="_blank">
+        <div *ngIf="isCollapsed; else elseBlock"><h2 class="text-base logo-text text-white mt-3">NTVz</h2></div>
+        <ng-template #elseBlock><h2 class="logo-text text-white mt-3">NTVz</h2></ng-template>
+
+        
+      </a>
+    </div>
+    <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+      <li nz-submenu nzOpen nzTitle="Post" nzIcon="dashboard">
+        <ul>
+          <li nz-menu-item nzMatchRouterExactExact>
+            <a routerLink="/admin/posts" >Post List</a>
+          </li>
+          <li nz-menu-item nzMatchRouterExactExact>
+            <a routerLink="/admin/posts/add" >Post Add</a>
+          </li>
+        </ul>
+      </li>
+      <li nz-submenu nzOpen nzTitle="Project" nzIcon="form">
+        <ul>
+          <li nz-menu-item nzMatchRouterExact>
+            <a routerLink="/admin/projects" >Project List</a>
+          </li>
+          <li nz-menu-item nzMatchRouterExact>
+            <a routerLink="/admin/projects" >Project List</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header>
+      <div class="app-header">
+        <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
+            <i class="trigger"
+               nz-icon
+               [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+            ></i>
+        </span>
+      </div>
+    </nz-header>
+    <nz-content>
+      <div class=" bg-[#fff] p-[24px] mb-10">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+  </nz-layout>
+</nz-layout>

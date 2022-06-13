@@ -14,6 +14,9 @@ export class ProductService {
   getProduct(id: number): Observable<IProduct> {
     return this.http.get<IProduct>(`${this.API_URL}/${id}`);
   }
+  searchProduct(searchInput: string): Observable<IProduct[]> {
+    return this.http.get<IProduct[]>(`${this.API_URL}?name_like=${searchInput}`)
+  }
 
   getProducts(): Observable<IProduct[]> {
     return this.http.get<IProduct[]>(this.API_URL);

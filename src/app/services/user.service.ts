@@ -1,9 +1,22 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
+import { Observable } from 'rxjs';
+import { UserType } from '../models/User';
+const url = `http://localhost:3001`;
+interface User {
+  username: string;
+  password: string;
+}
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService {
+  constructor(private http: HttpClient) {}
+  signup(inputData: User): Observable<UserType> {
+    return this.http.post<UserType>(`${url}/signup`, inputData);
+  }
 
-  constructor() { }
+  signin(inputData: User): Observable<UserType> {
+    return this.http.post<UserType>(`${url}/signin`, inputData);
+  }
 }
