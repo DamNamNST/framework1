@@ -1,4 +1,4 @@
-<hr />
+<!-- <hr />
 <table class="table table-warning">
   <thead>
     <tr>
@@ -30,9 +30,60 @@
   </tbody>
 </table>
 <router-outlet></router-outlet>
-<!-- <div class="detail" *ngIf="productDetail">
+ <div class="detail" *ngIf="productDetail">
   <hr />
   <app-product-detail [product]="productDetail"></app-product-detail>
   <router-outlet></router-outlet>
   {{productDetail.name}}
-</div> -->
+</div> --> -->
+<h1>{{ breadcrumb }}</h1>
+
+<button type="button" class="btn ">
+    <a routerLink="/admin/products/add">
+        Thêm Sản Phẩm
+    </a>
+</button>
+<button (click)="onHandlerClick()" type="button" class="btn btn-primary">Show</button>
+<div class="send-request">
+  <!-- <button nz-button nzType="primary" [disabled]="setOfCheckedId.size === 0" [nzLoading]="loading"
+      (click)="sendRequest()">
+      Send Request
+  </button> -->
+  <span>Selected {{ setOfCheckedId.size }} items</span>
+</div>
+
+<nz-table class="" #rowSelectionTable nzShowPagination nzShowSizeChanger [nzData]="listOfData"
+  (nzCurrentPageDataChange)="onCurrentPageDataChange($event)">
+  <thead>
+      <tr>
+          <th [nzChecked]="checked" [nzIndeterminate]="indeterminate" (nzCheckedChange)="onAllChecked($event)"></th>
+          <th>STT</th>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Status</th>
+          <th>Description</th>
+          <th colspan="2">Action</th>
+      </tr>
+  </thead>
+  <tbody>
+
+      <tr *ngFor="let data of rowSelectionTable.data; let i = index ">
+          <td [nzChecked]="setOfCheckedId.has(data.id)" [nzDisabled]="data.disabled"
+              (nzCheckedChange)="onItemChecked(data.id, $event)"></td>
+          <td>{{ i+1 }}</td>
+          <td>{{ data.id }}</td>
+          <td>{{ data.name }}</td>
+          <td>{{ data.price }}</td>
+          <td>{{ data.status == 1 ? "Còn Hàng": "Hết Hàng" }}</td>
+          <td>{{ data.description }}</td>
+          <td>
+              <a routerLink="/admin/products/edit/{{data.id}}">
+                  <button type="button" class="btn btn-success">Sửa</button>
+              </a>
+
+          </td>
+          <td><button (click)="onDelete(data.id)" type="button" class="btn btn-danger">Xóa</button></td>
+      </tr>
+  </tbody>
+</nz-table>
