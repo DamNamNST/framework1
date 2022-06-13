@@ -25,28 +25,28 @@
   "users": [
     {
       "email": "admin12345@gmail.com",
-      "password": "123456",
+      "password": "$2a$10$qCtfurr85ncyne8RQYHvk.InOybH0uofRBOrNwvYC311uwNTD3l76",
       "remember": true,
       "role": 2,
       "id": 1
     },
     {
       "email": "abc123@gmail.com",
-      "password": "123456",
+      "password": "$2a$10$64bPsa6P.3B7O12xhHnjBuUFZZ9/miPC52Mg1MI4nhoh9X5JAr6Si",
       "remember": true,
       "role": 2,
       "id": 2
     },
     {
       "email": "admin666@gmail.com",
-      "password": "123456",
+      "password": "$2a$10$9zCju5zcIIEnrlF4pCyuR.FX3oRY75xR.bqCr8ZepWBQYcbInygwe",
       "remember": true,
       "role": 2,
       "id": 3
     },
     {
       "email": "nguoidung1@gmail.com",
-      "password": "123456",
+      "password": "$2a$10$z6ZAv1u2gpJWAtcJaaEhZ.Iml.zv/4TQj.E1UDIRlsStCE2sUzNdW",
       "username": "nguoidung1",
       "role": 1,
       "id": 4
@@ -59,24 +59,6 @@
     "cv": "abc"
   },
   "posts": [
-    {
-      "id": 1,
-      "title": "UI Interactions of the week 1",
-      "image": "http://res.cloudinary.com/vintph16172/image/upload/v1655038649/jtbpznzjprnojbudueu7.jpg",
-      "createAt": "2022-06-12T12:57:38.809Z",
-      "categoriesPostId": 1,
-      "short_desc": "abc 123",
-      "desc": "<p>jfnejkwebfjewbf</p>\n"
-    },
-    {
-      "id": 2,
-      "title": "Post 2",
-      "image": "abc.img",
-      "createAt": "2022-06-10T14:42:15.017Z",
-      "categoriesPostId": 2,
-      "short_desc": "abc 12345 6",
-      "desc": "<p>jfnejkwebfjewbf</p>\n"
-    },
     {
       "id": 3,
       "title": "UI Interactions of the week 3",
@@ -148,24 +130,6 @@
       "categoriesPostId": 1,
       "short_desc": "abc 123",
       "desc": "jfnejkwebfjewbf"
-    },
-    {
-      "id": 11,
-      "title": "UI Interactions of the week 11",
-      "image": "https://picsum.photos/200/300",
-      "createAt": "2022-06-10T14:08:50.598Z",
-      "categoriesPostId": 1,
-      "short_desc": "abc 123",
-      "desc": "jfnejkwebfjewbf"
-    },
-    {
-      "title": "test 123445",
-      "image": "http://res.cloudinary.com/vintph16172/image/upload/v1655044398/rwqcy94tqsi2icarmpgj.jpg",
-      "createAt": "2022-06-12T14:33:32.958Z",
-      "categoriesPostId": "1",
-      "short_desc": "abc44444",
-      "desc": "<p>aaaaaaaaaaaaaaaaaa</p>\n",
-      "id": 12
     }
   ],
   "categoriesPosts": [
@@ -181,8 +145,8 @@
   "projects": [
     {
       "id": 1,
-      "name": "Website Bán đồ ăn nhanh Fastfood",
-      "image": "abc.img",
+      "name": "Dự án mẫu",
+      "image": "https://picsum.photos/200/300",
       "createAt": "12/02/2022",
       "categoriesProjectId": 1,
       "short_desc": "abc 123",
@@ -190,31 +154,31 @@
     },
     {
       "id": 2,
-      "name": "Website Bán đồ ăn nhanh Fastfood",
-      "image": "abc.img",
+      "name": "Dự án 1",
+      "image": "https://picsum.photos/200/300",
       "createAt": "12/02/2022",
       "categoriesProjectId": 2,
       "short_desc": "abc 123",
       "desc": "jfnejkwebfjewbf"
     },
     {
-      "name": "Burger Xông Khói",
-      "image": "http://res.cloudinary.com/vintph16172/image/upload/v1655047124/h1n7gfjmnuqg8txogqjj.jpg",
-      "createAt": "2022-06-12T15:18:51.356Z",
-      "categoriesProjectId": "1",
-      "short_desc": "132564",
-      "desc": "<p>&aacute;df3e1f5ew1f</p>\n",
+      "name": "Dự Án NodeJS",
+      "image": "https://picsum.photos/200/300",
+      "createAt": "2022-06-13T23:10:41.377Z",
+      "categoriesProjectId": "2",
+      "short_desc": "Dự Án node",
+      "desc": "<p>m&ocirc; tả</p>\n",
       "id": 3
     }
   ],
   "categoriesProjects": [
     {
       "id": 1,
-      "name": "Công Nghệ"
+      "name": "HTML"
     },
     {
       "id": 2,
-      "name": "Tin Tức"
+      "name": "Javascript"
     }
   ]
 }

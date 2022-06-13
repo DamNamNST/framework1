@@ -75,11 +75,11 @@
               <td [nzExpand]="expandSet.has(data.id)" (nzExpandChange)="onExpandChange(data.id, $event)"></td>
               <td>
                   <a routerLink="/admin/posts/edit/{{data.id}}">
-                      <button type="button" class="btn btn-success">Sửa</button>
+                      <button type="button" class="btn btn-success bg-green-500 hover:bg-green-800">Sửa</button>
                   </a>
 
               </td>
-              <td><button (click)="onDelete(data.id)" type="button" class="btn btn-danger">Xóa</button></td>
+              <td><button (click)="onDelete(data.id)" type="button" class="btn btn-danger bg-rose-500 hover:bg-rose-800">Xóa</button></td>
 
           </tr>
           <tr [nzExpand]="expandSet.has(data.id)">
