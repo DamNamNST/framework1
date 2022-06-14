@@ -1,22 +1,47 @@
 <div class="container">
-
-  <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
-      <nz-form-item>
-          <nz-form-control nzErrorTip="Please input your username!">
-              <nz-input-group nzPrefixIcon="user">
-                  <input type="text" nz-input formControlName="email" placeholder="Email" />
-              </nz-input-group>
-          </nz-form-control>
-      </nz-form-item>
-      <nz-form-item>
-          <nz-form-control nzErrorTip="Please input your Password!">
-              <nz-input-group nzPrefixIcon="lock">
-                  <input type="password" nz-input formControlName="password" placeholder="Password" />
-              </nz-input-group>
-          </nz-form-control>
-      </nz-form-item>
-      <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Sign in</button>
-      Or
-      <a>register now!</a>
+  <form
+    nz-form
+    [formGroup]="validateForm"
+    class="login-form m-10"
+    (ngSubmit)="submitForm()"
+  >
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Please input your username!">
+        <nz-input-group nzPrefixIcon="user" class="h-[50px] w-[600px]">
+          <input
+            type="text"
+            nz-input
+            formControlName="email"
+            placeholder="Email"
+          />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Please input your Password!">
+        <nz-input-group nzPrefixIcon="lock" class="h-[50px] w-[600px]">
+          <input
+            type="password"
+            nz-input
+            formControlName="password"
+            placeholder="Password"
+          />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <button
+      nz-button
+      class="login-form-button login-form-margin h-[50px] w-[600px]"
+      [nzType]="'primary'"
+    >
+      Sign in
+    </button>
+    <br>
+    Or
+    <a
+      class="text-2xl text-black md:p-4 py-2 block hover:text-purple-400"
+      routerLink="/signup"
+      >register now!</a
+    >
   </form>
 </div>
