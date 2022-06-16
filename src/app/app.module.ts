@@ -48,6 +48,8 @@ import { ProjectFormComponent } from './components/project-form/project-form.com
 import { ProjectListComponent } from './components/project-list/project-list.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { ProductPageComponent } from './components/product-page/product-page.component';
+import { DetailProjectComponent } from './pages/detail-project/detail-project.component';
+import { UserProfileFormComponent } from './components/user-profile-form/user-profile-form.component';
 
 registerLocaleData(en);
 
@@ -74,6 +76,8 @@ registerLocaleData(en);
     ProjectListComponent,
     ProductFormComponent,
     ProductPageComponent,
+    DetailProjectComponent,
+    UserProfileFormComponent,
   ],
   imports: [
     BrowserModule,

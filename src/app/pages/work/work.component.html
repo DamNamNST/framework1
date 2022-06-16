@@ -1,4 +1,4 @@
-<section>
+<!-- <section>
   <div class=" md:w-[875px] mt-[100px]  mx-auto px-4 md:px-0">
       <h2 class="text-5xl font-bold" >Work</h2>
       <div class="pt-[40px] grid grid-rows-4 gap-4 ">
@@ -80,5 +80,42 @@
           </div>
       </div>
       
+  </div>
+</section> -->
+<section>
+  <div class="md:w-[875px] mt-[100px] mx-auto px-4 md:px-0">
+    <h2 class="text-5xl font-bold">Work</h2>
+    <div *ngIf="project" class="pt-[40px] grid grid-rows-4 gap-4">
+      <div
+        *ngFor="let data of project; let i = index"
+        class="flex flex-wrap justify-center border-b-2 border-[#E0E0E0] pb-12"
+      >
+        <div class="md:basis-2/5">
+          <a routerLink="/work/{{ data.id }}">
+            <img
+              src="{{ data.image }}"
+              alt=""
+              class="h-[300px] w-screen md:h-[200px] md:w-[300px] rounded-md"
+            />
+          </a>
+        </div>
+        <div class="md:basis-3/5">
+          <a class="text-black" routerLink="/work/{{ data.id }}">
+            <h2 class="text-3xl text-[#21243D] font-bold">{{ data.name }}</h2>
+            <div class="">
+              <button class="bg-[#142850] px-3 rounded-3xl text-xl text-white">
+                2022
+              </button>
+              <span class="text-[#8695A4] text-xl ml-4">
+                {{ data.categoriesProject.name }}
+              </span>
+            </div>
+            <p class="mt-4 text-lg">
+              {{ data.short_desc }}
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
